@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.encabezado {
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.388);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+.menu__item a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* SECCION PRINCIPAL */
+
+.seccionPrincipal {
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccionPrincipal h2 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* DESTINOS */
+
+.destinos {
+    padding: 100px;
+}
+
+.destinos h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+/** TARJETAS **/
+
+.tarjetas {
+    display: flex;
+    gap: 40px;
+}
+
+.tarjeta {
+    background-color: pink;
+    height: 500px;
+    width: 100%;
+    padding: 40px;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.tarjeta--playa {
+    background-image: url("../img/destinos-1.png");
+    justify-content: start;
+    align-items: start;
+}
+
+.tarjeta--montana {
+    background-image: url("../img/destinos-2.jpg");
+}
+
+.tarjeta--selva {
+    background-image: url("../img/destinos-3.png");
+    justify-content: end;
+    align-items: start;
+}
+
+.tarjeta__titulo {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 16px;
+    border-radius: 20px;
+}
+
+/* PAQUETES */
+
+.paquetes {
+    background-image: url("../img/aeropuerto.jpg");
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        ". texto";
+}
+
+.paquetes__texto {
+    grid-area: texto;
+    color: white;
+    background-color: rgba(0, 0, 78, 0.8);
+    padding: 100px 60px;
+}
+
+.borde {
+    border-bottom: 3px solid white;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .destinos {
+        padding: 50px;
+    }
+
+    .paquetes {
+        grid-template-columns: 1fr 2fr;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .paquetes {
+        display: flex;
+    }
+
+}
